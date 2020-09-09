@@ -7,6 +7,12 @@ echo .-------------------------------.
 
 ::Environment Variables
 
+::The number of the disk to work on. See Disk Manager
+set DISK_NUMBER=3
+
+::Whether you want to clean the disk or not (WARNING, DEFAULT TRUE)
+set CLEAN_DISK=TRUE
+
 ::Windows installation packs directory
 set WIN_DATA_DIR=D:\OSImages\Windows
 
@@ -19,14 +25,23 @@ set WIN_PARTITION_SIZE=126000
 ::Create another partition for data storage. 
 set DATA_PARTITION=FALSE
 
-::The number of the disk to work on. See Disk Manager
-set DISK_NUMBER=3
-
 ::The default letter for Windows system partition.
 set DEFAULT_WIN_LETTER=X
 
 ::The default letter for data partition
 set DEFAULT_DATA_LETTER=Z
+
+if "%CLEAN_DISK%"=="TRUE" (
+    echo .
+    echo ### CLEANING DISK %DISK_NUMBER%...
+    (
+        echo select disk %DISK_NUMBER%
+        echo clean 
+    ) | diskpart
+) else (
+    echo .
+    echo ### DISK CLEANING SKIPPED
+)
 
 ::Create root Partition
 (
