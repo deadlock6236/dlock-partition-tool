@@ -23,7 +23,7 @@ set WIN_DATA_PACK=WIN10_X64_ES
 set WIN_PARTITION_SIZE=126000
 
 ::Create another partition for data storage. 
-set DATA_PARTITION=FALSE
+set DATA_PARTITION=TRUE
 
 ::The default letter for Windows system partition.
 set DEFAULT_WIN_LETTER=X
@@ -66,7 +66,8 @@ xcopy "%WIN_DATA_DIR%\%WIN_DATA_PACK%" %DEFAULT_WIN_LETTER%: /E /H /C /I
 if "%DATA_PARTITION%"=="TRUE" (
     echo .
     echo ### CREATING DATA PARTITION
-    (
+    (   
+        echo select disk %DISK_NUMBER%
         echo create partition primary
         echo select partition 2
         echo format fs=ntfs label="DATA" quick
