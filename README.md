@@ -42,5 +42,7 @@ There are comments in the code, go look there, I'm not copy-pasting those over h
 ## How the heck do I run it?
 If you're asking yourself that, do yourself a favor and google what a batch script is before you make a mess on your computer. Really, I recommend you to carefully read the code before executing this. I'm 100% no responsible for any damage to your personal files.
 
+However, make sure you run the *__DlockPartitionTool.bat__* script and not the other one because it's the older version that I'm just keeping for no apparent reason.
+
 ## Who are you?
 A middle-road software developer that fixes computers on his spare time.
