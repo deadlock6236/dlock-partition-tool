@@ -1,3 +1,5 @@
+:: @Author deadlock6236
+
 @echo off
 
 echo :::DlocK partition tool:::
