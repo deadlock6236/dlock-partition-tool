@@ -1,7 +1,7 @@
 @echo off
 
 echo :::DlocK partition tool:::
-echo v8.9.20
+echo v20.9.10
 echo .-------------------------------.
 
 
