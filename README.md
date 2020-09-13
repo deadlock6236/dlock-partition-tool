@@ -11,7 +11,7 @@ And this is also my first contribution to the software community so feel free to
 ## What can I do with it?
 Whatever you want actually, but I can tell you what I do with it.
 
-See, I build and repair computers quite often, so I wanted a way to install Windows directly into a drive before even putting it into the computer I'm working on, so that I don have to waste time recreating a bootable flash drive each time I have to install a different Windows version. This way I can keep all the different Windows installation files on my computer and I only have to hook the drive to my computer and tell the script which version I want to use.
+See, I build and repair computers quite often, so I wanted a way to install Windows directly into a drive before even putting it into the computer I'm working on, so that I don't have to waste time recreating a bootable flash drive each time I have to install a different Windows version. This way I can keep all the different Windows installation files on my computer and I only have to hook the drive to my computer and tell the script which version I want to use.
 
 You will most likely find better solutions out there but this one does exactly what I need it to do, nothing more, nothing less, and so far it has proven to be quite useful for me so I decided to share it with the community, after all, it might help some fellow geek out there.
 
