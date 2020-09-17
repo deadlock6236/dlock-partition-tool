@@ -22,7 +22,7 @@ set WIN_DATA_DIR=D:\OSImages\Windows
 set WIN_DATA_PACK=WIN10_X64_ES
 
 ::Size in MB for Windows system partition. #TODO 0 to use all space available
-set WIN_PARTITION_SIZE=126000
+set WIN_PARTITION_SIZE=0
 
 ::Create another partition for data storage. 
 set DATA_PARTITION=TRUE
@@ -46,9 +46,16 @@ if "%CLEAN_DISK%"=="TRUE" (
 )
 
 ::Create root Partition
+
+if "%WIN_PARTITION_SIZE%"==0 (
+    set ROOT_DISK_CMD = "create partition primary"
+) else (
+    set ROOT_DISK_CMD = "create partition primary size=%WIN_PARTITION_SIZE%"
+)
+
 (
     echo select disk %DISK_NUMBER%
-    echo create partition primary size=%WIN_PARTITION_SIZE%
+    echo %ROOT_DISK_CMD%
     echo select partition 1
     echo format fs=ntfs label="Windows" quick
     echo assign letter=X
