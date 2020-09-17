@@ -3,7 +3,7 @@
 @echo off
 
 echo :::DlocK partition tool:::
-echo v20.9.10
+echo v20.9.16
 echo .-------------------------------.
 
 
@@ -47,10 +47,10 @@ if "%CLEAN_DISK%"=="TRUE" (
 
 ::Create root Partition
 
-if "%WIN_PARTITION_SIZE%"==0 (
-    set ROOT_DISK_CMD = "create partition primary"
+if %WIN_PARTITION_SIZE%==0 (
+    set ROOT_DISK_CMD=create partition primary
 ) else (
-    set ROOT_DISK_CMD = "create partition primary size=%WIN_PARTITION_SIZE%"
+    set ROOT_DISK_CMD=create partition primary size=%WIN_PARTITION_SIZE%
 )
 
 (
